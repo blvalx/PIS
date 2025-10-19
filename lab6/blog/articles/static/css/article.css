@@ -1,0 +1,67 @@
+body {
+	background: #1abc9c;
+	font-family: Tahoma, Arial, sans-serif;
+	color: #ffffff;
+}
+/* настройка архива
+   настройка логотипа */
+
+/* настройка всего блочного контента */
+.archive {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.archive .header {
+    display: flex;
+	justify-content: space-between;
+	align-items: top;
+}
+.archive img{
+	width: 318px;
+	margin-left: 321px;
+	margin-right: auto;
+}
+/* конец настройки архива */
+
+.article {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.article.header.ref {
+    display: flex;
+}
+
+.article .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: top;
+}
+
+
+.header a {
+	color: #ffffff;
+}
+
+/* общая настройка текста (archive и article) */
+.article-text, .article-created-date {
+	color: #e1f1f2;
+}
+
+.article-author {
+	font-weight: bold;
+}
+
+.post-title a {
+	color: #ffffff;
+}
+
+.article-author {
+	width: 50%;
+	float: left;
+}
+
+.article-created-date {
+	text-align: right;
+}
