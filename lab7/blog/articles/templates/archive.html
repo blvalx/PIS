@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Архив статей</title>
+	<link rel="stylesheet" href="{% static 'css/article.css' %}">
+    </head>
+    <body class="archive">
+	<div class="header">
+		<img src="{% static 'photo_2025-10-02_17-35-46.jpg' %}" width=12% />
+		<h2><a href="/reg/" target=_blank>Регистрация</a></h2>
+	</div>
+
+	{% for post in posts %}
+	<div class="main">
+		<div class="one-post">
+			<div class="one-post header">
+				<h2 class="post-title"><a href="/article/{{ post.id }}" target=_blank>{{ post.title }}</a></h2>
+				<button class="fold-button">свернуть</button>
+			</div>
+			<div class="article-info">
+				<div class="article-author">{{ post.author.username }}</div>
+				<div class="article-created-date">{{ post.created_date|date:"j E Y" }}</div>
+			</div>
+			<p class="article-text">{{ post.get_excerpt }}</p>
+		</div>
+	</div>
+	{% endfor %}
+	<script src="{% static 'js/fold-post.js' %}"></script>
+    </body>
+</html>
